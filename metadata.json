@@ -1,0 +1,6 @@
+{
+  "name": "SV Sandbox",
+  "description": "Enterprise AI experimentation hub featuring interactive notebooks, multi-agent pipeline orchestration, caching & quantization analysis, and an embedded multi-provider assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
