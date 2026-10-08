@@ -1,139 +1,173 @@
-# SV Sandbox - Advanced AI Experimentation & Multi-Agent Orchestration Hub
+# SV Sandbox Analyzer
 
-![SV Sandbox Banner](https://img.shields.io/badge/SV%20Sandbox-v1.0.0-emerald?style=for-the-badge)
-![Multi-Provider Powered](https://img.shields.io/badge/Multi--Provider-Claude%20%7C%20GPT--4o%20%7C%20Grok%20%7C%20Fable-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Enterprise-cyan?style=for-the-badge)
+A modern AI experimentation workspace for benchmarking models, exploring quantization strategies, orchestrating multi-agent workflows, and generating executive reports from live sandbox performance data.
 
-**SV Sandbox** is a company-grade AI innovation platform designed for model experimentation, multi-agent orchestration, precision quantization analysis, and prompt caching benchmarking. Featuring a unique futuristic visual identity built around a live-motion green-and-cyan animated glowing triangle emblem, **SV Sandbox** empowers research teams and AI engineers to prototype, optimize, and deploy high-performance model workflows across top model providers (Claude 3.5 Sonnet / Opus, GPT-4o, Grok-2, Fable Ultra).
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-97.8%25-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React 19" />
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite" alt="Vite" />
+  <img src="https://img.shields.io/badge/Express-4-000000?style=for-the-badge&logo=express" alt="Express" />
+</p>
 
----
+## Overview
 
-## 🌟 Key Objectives & Brand Identity
+SV Sandbox Analyzer is a single-page, enterprise-inspired dashboard for evaluating AI workloads across hardware, model variants, quantization modes, and prompt optimization strategies. It combines:
 
-- **Futuristic Live-Motion Brand Identity**: Glowing animated emerald, cyan, and multi-spectrum brand emblem, live telemetry bar, and a real-time moving space molecules background canvas.
-- **Enterprise Dark Aesthetics**: High-contrast, sleek interface with deep space galactic canvas, moving atomic/molecular nodes with glowing orbital rings and particle connections, animated ambient glows, emerald (`#10B981`), cyan (`#06B6D4`), purple (`#8B5CF6`), and pink accents.
-- **Data-Driven Optimization**: Real-time measurement of VRAM footprint, TTFT (Time To First Token) latency drops, and cost reductions across quantization modes.
-- **Interactive Multi-Agent Canvas**: Non-pipeline graph layout displaying real-time agent communications, token budgets, and fallback orchestration.
+- live experiment tracking
+- notebook-style benchmark simulations
+- multi-agent orchestration views
+- analytics dashboards
+- markdown report generation
+- embedded AI assistant guidance
 
----
+This project is designed as a polished, presentation-friendly AI ops interface that shows how teams can experiment with inference performance and optimization decisions in a sandbox environment.
 
-## 🚀 Core Features
+## Highlights
 
-### 1. Intelligent AI Assistant (Gemini 3.6)
-- **Context-Aware Agent**: Built-in side drawer assistant connected to experiment logs and pipeline configurations.
-- **Adaptive Recommendations**: 1-click execution for model optimizations (e.g., INT4 AWQ precision, Prompt Caching).
-- **Code & Syntax Generator**: Auto-generates Python and TypeScript code snippets for model deployment.
+### Benchmarking and model analysis
+- Compare models and deployment configurations
+- Simulate throughput, latency, and VRAM efficiency
+- Review quantization trade-offs such as FP16, INT8, and INT4 AWQ
+- Track prompt caching benefits and operational cost impact
 
-### 2. Advanced Experimentation Workbench & Notebooks
-- **Interactive Notebook Cells**: Run live Python code blocks with simulated PyTorch / HuggingFace model benchmarks.
-- **Quantization Simulator**: Test FP16, INT8, and INT4 AWQ precision with real-time memory and perplexity comparisons.
-- **Resource Allocation**: Simulate GPU cluster provisioning (1x A100 80GB, 4x H100 80GB, TPU v5p-8).
+### Multi-agent orchestration
+- Visualize a DAG-style workflow of specialized AI agents
+- Monitor agent behavior, fallback logic, and task routing
+- Coordinate experiments across research, synthesis, evaluation, and safety review
 
-### 3. Multi-Agent DAG Orchestrator
-- **Visual Collaboration Graph**: Dynamic topology display featuring Autonomous Researcher, Code Synthesizer, Evaluator, and Safety Guard nodes.
-- **Agent Controls**: Step-by-step execution, agent temperature adjustments, and communication logs.
-- **SLA Fallbacks**: Automatic fallback triggering when latency or accuracy thresholds are breached.
+### Interactive workspace
+- Dashboard-driven control plane for experiments
+- Notebook-style section for execution and documentation
+- Report generation with export-ready summaries
+- Real-time telemetry and animated UI presentation
 
-### 4. Enterprise Analytics & Performance Matrix
-- **Throughput & TTFT Curves**: Interactive Recharts area graphs measuring tokens/sec vs. response latency.
-- **VRAM Savings Tracking**: Visualize up to 62.4% memory footprint reductions with INT4 AWQ quantization.
-- **Cost Engine**: Real-time token cost calculator projecting savings across model families.
+### AI assistant integration
+- Embedded assistant panel for optimization recommendations
+- One-click actions for quantization or caching adjustments
+- Context-aware prompts tailored to active workflow
 
-### 5. Enterprise Reports & Compliance
-- **Auto-Generated Executive Summary**: Produce comprehensive markdown reports detailing benchmark metrics and architecture guidelines.
-- **1-Click Export & Print**: Export reports to PDF/Print or copy clean markdown for team documentation.
-- **Audit Trails & Security Isolation**: Environment cluster isolation and workspace switching.
+## Tech Stack
 
----
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
+- Express.js
+- Google GenAI SDK
+- Lucide icons
+- Canvas confetti
 
-## 🛠️ Technology Stack
+## Project Structure
 
-- **Frontend Framework**: React 18, TypeScript, Vite
-- **Styling & UI**: Tailwind CSS, Lucide React Icons
-- **Visual Analytics**: Recharts
-- **Backend & AI Server**: Express.js, `@google/genai` (Gemini 3.6)
-- **Effects**: Canvas Confetti
-
----
-
-## 📁 Project Structure
-
-```
+```text
 .
-├── metadata.json              # Application metadata & configuration
-├── package.json               # Dependencies & scripts
-├── server.ts                  # Express server entry point & Gemini API proxy
+├── index.html
+├── metadata.json
+├── package.json
+├── server.ts
+├── tsconfig.json
+├── vite.config.ts
+├── bun.lock
 ├── src/
-│   ├── App.tsx                # Main container component & tab manager
-│   ├── index.css              # Tailwind CSS imports & global styles
-│   ├── main.tsx               # React DOM root entry point
-│   ├── types.ts               # Global TypeScript definitions
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── types.ts
 │   ├── components/
-│   │   ├── Header.tsx         # Navigation header with live-motion SVsandbox logo
-│   │   ├── Sidebar.tsx        # Navigation sidebar & VRAM quota gauge
-│   │   ├── LiveTelemetryBar.tsx # Real-time streaming spectrum telemetry bar
-│   │   ├── SpaceMoleculeCanvas.tsx # Animated moving space molecules & atomic bond canvas
-│   │   ├── AIAssistantDrawer.tsx # Context-aware AI assistant drawer
+│   │   ├── Header.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── LiveTelemetryBar.tsx
+│   │   ├── SpaceMoleculeCanvas.tsx
+│   │   ├── AIAssistantDrawer.tsx
 │   │   └── tabs/
-│   │       ├── DashboardTab.tsx        # Overview KPI metrics & performance charts
-│   │       ├── NotebookTab.tsx         # Interactive Python code benchmark cells
-│   │       ├── AgentOrchestratorTab.tsx # Multi-agent graph visualizer
-│   │       ├── PipelineTab.tsx         # Quantization & caching pipeline builder
-│   │       ├── AnalyticsTab.tsx        # Model comparison matrix & Recharts
-│   │       └── ReportsTab.tsx          # Markdown executive report generator
-│   └── data/                  # Mock benchmark data & default configurations
-└── README.md                  # Project documentation
+│   │       ├── DashboardTab.tsx
+│   │       ├── NotebookTab.tsx
+│   │       ├── PipelineTab.tsx
+│   │       ├── AgentOrchestratorTab.tsx
+│   │       ├── AnalyticsTab.tsx
+│   │       └── ReportsTab.tsx
+│   └── data/
+├── README.md
+└── dist/ (generated after build)
 ```
 
----
-
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher recommended)
-- `npm` package manager
-- Google Gemini API Key (optional for live AI assistant responses)
 
-### Installation
+- Node.js 18+
+- npm or bun
+- Optional: Google Gemini API key for assistant-enabled backend requests
 
-1. **Clone or navigate to the project directory:**
-   ```bash
-   cd /path/to/project
-   ```
+### Install dependencies
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. **Configure Environment Variables:**
-   Create or edit `.env` (or set `GEMINI_API_KEY` in environment):
-   ```env
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
+Or with Bun:
 
-4. **Start Development Server:**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:3000` in your browser.
+```bash
+bun install
+```
 
-5. **Build for Production:**
-   ```bash
-   npm run build
-   npm start
-   ```
+### Start the app in development mode
+
+```bash
+npm run dev
+```
+
+The app launches with the Express server and frontend via Vite.
+
+### Production build
+
+```bash
+npm run build
+```
+
+Then start the built server:
+
+```bash
+npm start
+```
+
+## Environment Configuration
+
+Create a `.env` file in the project root if you want to enable live Gemini-backed AI responses:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+## Available Scripts
+
+```bash
+npm run dev        # start local development environment
+npm run build      # build the frontend and server bundle
+npm run start      # run production build
+npm run clean      # remove generated build artifacts
+npm run lint       # TypeScript validation
+```
+
+## Use Cases
+
+This project is well suited for:
+
+- AI product demos
+- inference optimization workshops
+- LLM hardware benchmarking previews
+- enterprise AI experimentation dashboards
+- internal model performance presentations
+
+## Notes
+
+This repository is intentionally designed as a polished developer experience and visual demo, blending product UI with AI experimentation concepts. It is useful both as a launchpad for further engineering and as a showcase for AI orchestration workflows.
+
+## License
+
+This project is provided as-is for experimentation and demo use.
 
 ---
 
-## 🛡️ Enterprise Compliance & Security
-
-SVsandbox is architected with enterprise data security in mind:
-- **Server-Side API Keys**: Gemini API keys are processed strictly on the Express backend (`server.ts`) and never exposed to the client.
-- **Sandbox Isolation**: Workspaces run in isolated cloud environments to protect experiment logs and fine-tuned model weights.
-
----
-
-## 📜 License
-
-Created for Enterprise AI Experimentation. All rights reserved.
+Built for exploring how AI systems can be measured, optimized, and presented in a premium sandbox experience.
